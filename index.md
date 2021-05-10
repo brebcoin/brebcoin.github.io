@@ -1,37 +1,30 @@
-## Welcome to GitHub Pages
+# Welcome to breb
 
-You can use the [editor on GitHub](https://github.com/brebcoin/brebcoin.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+- download brebcoin core https://github.com/brebcoin/brebcoin/releases/tag/0.4.2.0
+- make brebcoin.conf in %appdata%\Brebcoin
+- add these lines
+  - `addnode=78.47.159.46:1337`
+  - `addnode=78.47.183.108:1337`
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## To receive breb:
+  - under the 'receive' tab, click 'request payment', copy the address
+  - You will also need a legacy address. Open the console from window -> console. Enter `getnewaddress addrnamehere legacy`
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+## To solo mine:
+ - add `server=1` to brebcoin.conf
+ - Find brebcoin-cli.exe (should be at C:\Program Files\Brebcoin\daemon )
+ - Make a .bat script in the same location with the following script:
+```
+echo Mining... Press [CTRL+C] to stop
+:loop
+	brebcoin-cli.exe generatetoaddress 1 youraddresshere
+goto loop
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/brebcoin/brebcoin.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## To mine on brebpool:
+ - download a scrypt miner (here's one https://github.com/pooler/cpuminer/releases/tag/v2.5.1)
+ - mine to stratum+tcp://78.47.159.46:3032, **MAKING SURE TO USE YOUR LEGACY ADDRESS**
+ - example .bat for cpuminer:
+```
+minerd.exe --url=stratum+tcp://78.47.159.46:3032 --userpass=LEGACYADDRESSHERE:doesntmatter -t 1
+```
