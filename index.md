@@ -24,11 +24,3 @@ echo Mining... Press [CTRL+C] to stop
 	brebcoin-cli.exe generatetoaddress 1 youraddresshere
 goto loop
 ```
-
-## To mine on brebpool:
- - download a scrypt miner (here's one https://github.com/pooler/cpuminer/releases/tag/v2.5.1)
- - mine to stratum+tcp://78.47.159.46:3032, **MAKING SURE TO USE YOUR LEGACY ADDRESS**
- - example .bat for cpuminer (where -t refers to the number of mining threads):
-```
-minerd.exe --url=stratum+tcp://78.47.159.46:3032 --userpass=LEGACYADDRESSHERE:doesntmatter -t 1
-```
