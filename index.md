@@ -15,7 +15,7 @@
   - You will also need a legacy address. Open the console from window -> console. Enter `getnewaddress addrnamehere legacy`
 
 ## To solo mine:
- - add `server=1` to brebcoin.conf
+ - add `server=1` and `gen=1` to brebcoin.conf
  - Find brebcoin-cli.exe (should be at C:\Program Files\Brebcoin\daemon )
  - Make a .bat script in the same location with the following script:
 ```
