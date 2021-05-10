@@ -1,7 +1,7 @@
 # Welcome to breb
 
 - download brebcoin core https://github.com/brebcoin/brebcoin/releases/tag/0.4.2.0
-- make brebcoin.conf in %appdata%\Brebcoin
+- make brebcoin.conf in %appdata%\Brebcoin or edit the file by clicking `open configuration file` in settings -> options on the bottom left
 - add these lines
   - `addnode=78.47.159.46:1337`
   - `addnode=78.47.183.108:1337`
