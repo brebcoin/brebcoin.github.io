@@ -1,5 +1,9 @@
 # Welcome to breb
 
+
+## breb explorer - http://78.47.183.108/
+
+## Getting started
 - download brebcoin core https://github.com/brebcoin/brebcoin/releases/tag/0.4.2.0
 - make brebcoin.conf in %appdata%\Brebcoin or edit the file by clicking `open configuration file` in settings -> options on the bottom left
 - add these lines
@@ -24,7 +28,7 @@ goto loop
 ## To mine on brebpool:
  - download a scrypt miner (here's one https://github.com/pooler/cpuminer/releases/tag/v2.5.1)
  - mine to stratum+tcp://78.47.159.46:3032, **MAKING SURE TO USE YOUR LEGACY ADDRESS**
- - example .bat for cpuminer:
+ - example .bat for cpuminer (where -t refers to the number of mining threads):
 ```
 minerd.exe --url=stratum+tcp://78.47.159.46:3032 --userpass=LEGACYADDRESSHERE:doesntmatter -t 1
 ```
